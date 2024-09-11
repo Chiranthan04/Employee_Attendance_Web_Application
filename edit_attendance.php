@@ -42,15 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $error = 'Error Editing attendance data: ';
     }
-    // Redirect to avoid form resubmission
-   
-        //   $pbno&month=$months" . urlencode($months));
-    
 }
-
-
-
-
 
 ?>
 
@@ -72,12 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             padding: 20px;
         }
         .container {
-            /* background-color: white;
-            padding: 30px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            width: 100%;
-            max-width: 600px; */
             max-width: 60%;
             width: 100%;
             margin: 80px auto;
@@ -88,9 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             text-align: center;
         }
         h2 {
-            /* margin-bottom: 20px;
-            font-size: 24px;
-            text-align: center;*/
             margin-top:10px; 
             font-size: 28px;
             font-weight: 600;
@@ -106,15 +89,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         .form-group {
             display: flex;
-         /* justify-content: space-evenly;  */
             align-items: center;
             margin-bottom: 15px;
             display: flex;
             justify-content: center;
-          /* align-items:stretch; */
-            /* margin-bottom: 20px;
-            display: flex;
-            align-items: center; */
         }
         .form-group label {
             display: block; 
@@ -125,7 +103,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
        .form-horizontal {
             display: flex;
-            /* justify-content: center; */
             margin-bottom: 20px;
             margin-top: 20px;
         }

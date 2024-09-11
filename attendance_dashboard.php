@@ -11,6 +11,8 @@ $servername = "localhost"; // Replace with your server name
 $username = "root"; // Replace with your MySQL username
 $password = ""; // Replace with your MySQL password
 $dbname = `emp`.`attendance_data`; // Replace with your database name
+
+
 // Retrieve user information from session
 $name = $_SESSION['name'];
 $pbno = $_SESSION['pbno'];
@@ -22,13 +24,14 @@ $pbno = $_SESSION['pbno'];
 $success = '';
 $error = '';
 
+
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Database configuration
-  $servername = "localhost"; // Replace with your server name
-$username = "root"; // Replace with your MySQL username
-$password = ""; // Replace with your MySQL password
-$dbname = `emp`.`attendance_data`; // Replace with your database name
+    $servername = "localhost"; // Replace with your server name
+    $username = "root"; // Replace with your MySQL username
+    $password = ""; // Replace with your MySQL password
+    $dbname = `emp`.`attendance_data`; // Replace with your database name
 
     // Create a new MySQLi connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -46,9 +49,7 @@ $dbname = `emp`.`attendance_data`; // Replace with your database name
     $leave_days = isset($_POST['leave_days']) ? intval($_POST['leave_days']) : 0;
     $atid = uniqid('atid_');  // Generates a unique id like 'atid_614a1aafc7ff1'
 
-    // Insert the new attendance record with the unique atid
-    // $stmt = $pdo->prepare("INSERT INTO attendance_details (atid, pbno, name, year, month, osd, training, leave) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    // $stmt->execute([$atid, $pbno, $name, $year, $month, $osd, $training, $leave]);
+
     // Validate inputs
     if ($year < 2000 || $year > 2024 || empty($month) || $osd_days < 0 || $training_days < 0 || $leave_days < 0) {
         $error = 'Please provide valid input values.';
@@ -78,7 +79,6 @@ try {
     die("Could not connect to the database: " . $e->getMessage());
 }
 $stmt = $pdo->query("SELECT * FROM `emp`.`attendance_data` WHERE PBno = $pbno");
-//"SELECT u.name, u.PBno, a.year, a.month, a.osdDate, a.trainingDate, a.leaves FROM `emp`.`user` u JOIN `emp`.`attendance_details` a ON u.pbno = a.pbno;");
 $attendance_records = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
@@ -155,12 +155,7 @@ if (isset($_GET['editdetailsucces'])) {
             display: flex;
             align-items: center;
         }
-        /* .form-group label {
-            margin-right: 15px;
-            width: 100px;
-            font-weight: bold;
-            font-size: 16px;
-        } */
+    
         .form-group label {
             display: block; 
             margin-right: 15px;
@@ -202,17 +197,6 @@ if (isset($_GET['editdetailsucces'])) {
             margin-top: 10px;
             margin : auto;
 
-            /* display: block;
-            width: 100%;
-            padding: 12px;
-            background-color: #6a11cb;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase; */
         }
         .submit-div{
             text-align: center;
@@ -277,7 +261,6 @@ if (isset($_GET['editdetailsucces'])) {
             text-align: center;
         }
         .btn.edit {
-            /* background-color: #4CAF50; */
             width: 40%;
             
             background-color: #6a11cb;
@@ -416,18 +399,6 @@ if (isset($_GET['editdetailsucces'])) {
     </div>
     <script>
     
-        // const yearSelect = document.getElementById('year');
-        // const currentYear = new Date().getFullYear();
-
-        // for (let year = 2000; year <= currentYear; year++) {
-        //     const option = document.createElement('option');
-        //     option.value = year;
-        //     option.textContent = year;
-        //     yearSelect.appendChild(option);
-        // }
-
-
-
         const yearSelect = document.getElementById('year');
         const currentYear = new Date().getFullYear();
         for (let i = currentYear; i >= 2000; i--) {

@@ -7,15 +7,12 @@ $dbname = `emp`.`userdata`; // Replace with your database name
 
 // Create a new MySQLi connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-// if (!isset($_SESSION['pbno'])) {
-//     header("Location: login.php");
-//     exit();
-// }
+
 $error= '';
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieve the current user's ID (or PB no.) from session or another method
-    $pbno = $_SESSION['pbno']; // Assuming the user ID is stored in session
+
+    $pbno = $_SESSION['pbno'];
     $old_password = $_POST['old_password'];
     $new_password = $_POST['new_password'];
     $confirm_password = $_POST['confirm_password'];
@@ -67,7 +64,6 @@ if (isset($_GET['error'])) {
 
 ?>
 
-<!-- Password Change Form -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

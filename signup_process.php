@@ -26,17 +26,6 @@ if (empty($name) || empty($pbno) || empty($password)) {
     exit();
 }
 
-// // Check if PB number is already taken
-// $stmt = $conn->prepare("SELECT PRno FROM `emp`.`userdata` WHERE PBno = ?");
-// $stmt->bind_param("i", $pbno);
-// $stmt->execute();
-// $result = $stmt->get_result();
-
-// if ($result->num_rows > 0) {
-//     header("Location: signup.php?error=PB number is already registered.");
-//     exit();
-// }
-
 // Hash the password for security
 $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
