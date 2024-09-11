@@ -55,7 +55,7 @@ Follow these steps to set up the project on your local machine:
 - **Attendance Tracking**: Enter, view, and manage attendance records including OSD days, leave days, and training days.
 - **Password Management**: Securely change passwords.
 - **User-Friendly Interface**: Simple and intuitive design for ease of use.
-
+## Images
 1. **Login Page and Sign Up Page**
    ![Login Page](images/login_page_and_signin_page.png)
 
