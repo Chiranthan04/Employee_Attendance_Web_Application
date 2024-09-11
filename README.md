@@ -56,5 +56,14 @@ Follow these steps to set up the project on your local machine:
 - **Password Management**: Securely change passwords.
 - **User-Friendly Interface**: Simple and intuitive design for ease of use.
 
+1. **Login Page and Sign Up Page**
+   ![Login Page](images/login_page_and_signin_page.png)
+
+2. **Attendance Dashboard**
+   ![Dashboard](images/dashboard.png)
+
+3. **Password Change and Attendance edit Page**
+   ![Attendance Entry Form](images/pass_change_and_edit_page.png)
+
 ## Contributions
 Feel free to contribute to this project by opening issues or submitting pull requests. Your feedback and contributions are welcome!
